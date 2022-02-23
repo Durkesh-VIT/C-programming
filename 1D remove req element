@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int arr[100]; 
+    int size;          
+    int i, j, ele ;      
+
+    printf("Enter total elements to input  : ");
+    scanf("%d", &size);
+    for(i=0; i<size; i++)
+    {
+        printf("Input element number %d:",i+1);
+        scanf("%d", &arr[i]);
+    }
+    
+    printf("Enter the element to delete: ");
+    scanf("%d",&ele);
+
+    for(i=0; i<size; i++){
+            
+            if(arr[i] == ele){
+                
+                for(j=i; j < size - 1; j++)
+                {
+                    arr[j] = arr[j + 1];   // shifts the blank space 
+                }
+
+                size--;   // since we deleted an element, reducing the total elements 
+
+                i--;
+            }
+        }
+
+    printf("\nFinal Array ");
+    for(i=0; i<size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
