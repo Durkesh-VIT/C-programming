@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[100];
+    int size;
+    int sum=0,max=0, min =0;          
+
+    printf("Enter total elements to input in arr1  : ");
+    scanf("%d", &size);
+    for(int i=0; i<size; i++)
+    {
+        printf("Input element number %d:",i+1);
+        scanf("%d", &arr[i]);
+    }
+    
+    for(int i=0 ; i<size;i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+        if(arr[i]<min){
+            min = arr[i];
+        }
+        sum=sum+arr[i];
+        
+    }
+    
+    printf("The sum of elements in the array is : %d",sum);
+    printf("Maximum value: %d",max);
+    printf("Minimum value: %d",min);
+
+        
+    
+     
+  
+
+
+    return 0;
+}
