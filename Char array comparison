@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char arr[100];
+    char arr2[100];
+    int size;          
+
+    printf("Enter total elements to input in arr1 & 2  : ");
+    scanf("%d", &size);
+    printf("ARRAY1\n");
+    for(int i=0; i<size; i++)
+    {
+        printf("Input element number %d:",i+1);
+        scanf("%s", &arr[i]);
+    }
+    printf("ARRAY2\n");
+    for(int i=0; i<size; i++)
+    {
+        printf("Input element number %d:",i+1);
+        scanf("%s", &arr2[i]);
+    }
+    
+    printf("\nCommon elements from both arrays\n");
+    for(int i=0;i<size;i++){
+        for (int j =0;j<size;j++){
+            
+            if(arr[i]==arr2[j]){
+            printf("%c\n",arr[i]);
+        }
+        
+    
+        }
+        
+    }
+    
+     
+  
+
+
+    return 0;
+}
